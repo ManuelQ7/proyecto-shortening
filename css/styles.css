@@ -21,8 +21,8 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr (11rem)[8] 1fr;
-      grid-template-columns: 1fr repeat(8, 11rem) 1fr;
+  -ms-grid-columns: 1fr (minmax(4rem, 13rem))[8] 1fr;
+      grid-template-columns: 1fr repeat(8, minmax(4rem, 13rem)) 1fr;
   -ms-grid-rows: 4rem 60vh 15rem 5rem;
       grid-template-rows: 4rem 60vh 15rem 5rem;
 }

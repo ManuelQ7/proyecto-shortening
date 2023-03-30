@@ -31,7 +31,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr repeat(8, 11rem) 1fr;
+    grid-template-columns: 1fr repeat(8, minmax(4rem, 13rem)) 1fr;
 
     grid-template-rows: 4rem 60vh 15rem 5rem;
 }
