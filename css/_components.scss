@@ -1,0 +1,12 @@
+//buttons
+
+.btn {
+    color: white;
+    padding: 0.3rem 0.9rem;
+    border-radius: 5rem;
+    text-decoration: none;
+
+    &--cyan {
+        background-color: $color-primary-cyan;
+    }
+}
