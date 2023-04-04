@@ -11,7 +11,7 @@
         grid-column: 2 / 6;
 
         padding: 5rem 0rem;
-        
+
         h1 {
             font-weight: bold;
             font-size: 4.8rem;
@@ -27,7 +27,7 @@
     }
 
     &__img {
-        grid-column: 6 / 10 ;
+        grid-column: 6 / 10;
 
         img {
             width: 55em;
@@ -38,7 +38,7 @@
 
 .stadistics {
     grid-column: 1 / -1;
-    background-color: $color-primary-cyan;
+    background-color: #f0f1f6;
     padding-bottom: 10rem;
     display: grid;
     grid-template-columns: 1fr repeat(8, minmax(1rem, 11rem)) 1fr;
@@ -50,10 +50,11 @@
 
         h2 {
             font-size: 1.8rem;
+            font-weight: bold;
         }
 
         p {
-
+            color: $color-neutral-violet;
         }
     }
 
@@ -69,7 +70,7 @@
         background-color: white;
         padding: 2rem;
         border-radius: 10px;
-        
+
         h3 {
             margin-top: 1.5rem;
         }
@@ -85,7 +86,7 @@
 
     &__logo {
         background-color: $color-neutral-dark-violet;
-        fill: $color-primary-cyan;
+        fill: #3d3356;
         padding: 1rem;
         border-radius: 50px;
         position: absolute;
@@ -93,4 +94,110 @@
     }
 
 
+}
+
+.link {
+    grid-column: 1 / -1;
+    background-color: #3a3053;
+    text-align: center;
+    background-image: url(/images/bg-boost-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h3 {
+        color: white;
+        font-size: 2.8rem;
+        margin: 4rem 0 2rem 0rem;
+    }
+
+    a {
+        display: inline-block;
+        margin-bottom: 4rem;
+    }
+
+    
+}
+
+.footer {
+    grid-column: 1 / -1;
+    background-color: $color-neutral-dark-violet;
+    padding: 5rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr repeat(8, minmax(1rem, 11rem)) 1fr;
+
+
+    &__content {
+        grid-column: 2 / 10;
+        display: flex;
+
+        img {
+            height: 4rem;
+            margin-right: auto;
+            fill: white;
+        }
+
+        ;
+    }
+
+    &__list {
+        margin-right: 3rem;
+       
+        p {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        li {
+            list-style: none;
+            color: white;
+            font-weight: 200;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__logos{
+
+        margin-left: 4rem;
+        img {
+            height: 2rem;
+            margin-left: 1.2rem;
+        }
+    }
+
+}
+
+.shorten {
+    grid-column: 2 / 10;
+    background-image: url(/images/bg-shorten-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #3a3053;
+    transform: translateY(60px);
+    
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+
+    &__search {
+        padding: 1.5rem;
+        width: 80%;   
+        border-radius: 10px;
+        border: none;
+
+        &::placeholder {
+            font-weight: bold;
+            font-size: 1.4rem;
+            opacity: 0.3;
+        }
+    }
+
+    &__btn {
+        border: none;
+        padding: 1.5rem;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
 }
