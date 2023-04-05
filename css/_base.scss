@@ -39,5 +39,5 @@ body {
     display: grid;
     grid-template-columns: 1fr repeat(8, minmax(1rem, 11rem)) 1fr;
 
-    grid-template-rows: 4rem repeat(3, min-content);
+    grid-template-rows: minmax(4rem, min-content) repeat(6, min-content);
 }

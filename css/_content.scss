@@ -10,7 +10,17 @@
     &__text {
         grid-column: 2 / 6;
 
-        padding: 5rem 0rem;
+        @media only screen and (max-width: 89rem) {
+            grid-column: 1 / -1;
+            padding: 2rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
 
         h1 {
             font-weight: bold;
@@ -33,6 +43,22 @@
             width: 55em;
             transform: translateX(6rem);
         }
+
+        @media only screen and (max-width: 89rem) {
+            grid-column: 1 / -1;
+
+            display: grid;
+            justify-self: center;
+            transform: translateX(-20%);
+
+
+            img {
+                width: 35rem;
+            }
+
+        }
+
+
     }
 }
 
@@ -42,6 +68,11 @@
     padding-bottom: 10rem;
     display: grid;
     grid-template-columns: 1fr repeat(8, minmax(1rem, 11rem)) 1fr;
+
+    @media only screen and (max-width: 89rem) {
+        padding: 0 2rem;
+        min-height: min-content;
+    }
 
     &__text {
         grid-column: 2 / 10;
@@ -62,14 +93,24 @@
         grid-column: 2 / 10;
         margin-top: 5rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
         grid-gap: 2rem;
+
+        @media only screen and (max-width: 89rem) { 
+            height: min-content;
+        }
+
+
     }
 
     &__detail {
         background-color: white;
         padding: 2rem;
         border-radius: 10px;
+
+        @media only screen and (max-width: 89rem) { 
+            height: min-content;
+        }
 
         h3 {
             margin-top: 1.5rem;
@@ -91,6 +132,12 @@
         border-radius: 50px;
         position: absolute;
         transform: translateY(-100%);
+
+
+        @media only screen and (max-width: 55rem) {
+            height: 4rem;
+       
+        }
     }
 
 
@@ -115,7 +162,7 @@
         margin-bottom: 4rem;
     }
 
-    
+
 }
 
 .footer {
@@ -126,15 +173,32 @@
     display: grid;
     grid-template-columns: 1fr repeat(8, minmax(1rem, 11rem)) 1fr;
 
+    @media only screen and (max-width: 89rem) {
+        padding: 5rem 2rem;
+    }
+
 
     &__content {
         grid-column: 2 / 10;
         display: flex;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 89rem) {
+            justify-content: center;
+        }
+      
 
         img {
             height: 4rem;
             margin-right: auto;
             fill: white;
+
+            @media only screen and (max-width: 89rem) {
+                text-align: center;
+                margin: 0;
+                margin-bottom: 3rem;
+            }
+    
         }
 
         ;
@@ -142,7 +206,14 @@
 
     &__list {
         margin-right: 3rem;
-       
+
+          
+        @media only screen and (max-width: 89rem) {
+            width: 15rem;
+            text-align: center;
+            margin: 0;
+        }
+
         p {
             color: white;
             font-weight: bold;
@@ -157,12 +228,19 @@
         }
     }
 
-    &__logos{
+    &__logos {
 
         margin-left: 4rem;
+
         img {
             height: 2rem;
             margin-left: 1.2rem;
+        }
+
+        @media only screen and (max-width: 89rem) {
+            text-align: center;
+            margin: 0;
+            margin-top: 5rem;
         }
     }
 
@@ -175,14 +253,14 @@
     background-repeat: no-repeat;
     background-color: #3a3053;
     transform: translateY(60px);
-    
+
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
 
     &__search {
         padding: 1.5rem;
-        width: 80%;   
+        width: 80%;
         border-radius: 10px;
         border: none;
 
@@ -199,5 +277,23 @@
         border-radius: 10px;
         font-weight: bold;
         font-size: 0.8rem;
+        cursor: pointer;
+    }
+
+    @media only screen and (max-width: 89rem) {
+        margin: 0 2rem;
+
+        transform: translateY(120px);
+
+        &__search {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        &__btn {
+            width: 100%;
+            font-size: 1.2rem;
+        }
+
     }
 }
