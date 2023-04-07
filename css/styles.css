@@ -23,9 +23,6 @@ body {
   display: grid;
   -ms-grid-columns: 1fr (minmax(1rem, 11rem))[8] 1fr;
       grid-template-columns: 1fr repeat(8, minmax(1rem, 11rem)) 1fr;
-  -ms-grid-rows: minmax(4rem, min-content) (min-content)[6];
-      grid-template-rows: minmax(4rem, -webkit-min-content) repeat(6, -webkit-min-content);
-      grid-template-rows: minmax(4rem, min-content) repeat(6, min-content);
 }
 
 .btn {
@@ -134,7 +131,6 @@ body {
 
 @media only screen and (max-width: 89rem) {
   .stadistics {
-    padding: 0 2rem;
     min-height: -webkit-min-content;
     min-height: -moz-min-content;
     min-height: min-content;
@@ -168,6 +164,7 @@ body {
   -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 2rem;
+  position: relative;
 }
 
 @media only screen and (max-width: 89rem) {
@@ -175,6 +172,28 @@ body {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
+    margin: 4rem 2rem;
+  }
+}
+
+.stadistics__details::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  translate: -50%;
+  left: 50%;
+  background-color: #2acfcf;
+  width: 40rem;
+  height: 0.5rem;
+}
+
+@media only screen and (max-width: 60rem) {
+  .stadistics__details::before {
+    top: 0;
+    translate: -50%;
+    left: 50%;
+    width: 0.5rem;
+    height: 40rem;
   }
 }
 
@@ -182,6 +201,7 @@ body {
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
+  position: relative;
 }
 
 @media only screen and (max-width: 89rem) {
@@ -189,6 +209,12 @@ body {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
+  }
+}
+
+@media only screen and (max-width: 60rem) {
+  .stadistics__detail {
+    grid-column: 1 / -1;
   }
 }
 
@@ -212,13 +238,15 @@ body {
   padding: 1rem;
   border-radius: 50px;
   position: absolute;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  top: 0;
+  translate: -50% -50%;
 }
 
-@media only screen and (max-width: 55rem) {
+@media only screen and (max-width: 60rem) {
   .stadistics__logo {
     height: 4rem;
+    margin-left: 0rem;
+    left: 50%;
   }
 }
 
@@ -409,6 +437,7 @@ body {
   -ms-grid-column-span: 8;
   grid-column: 2 / 10;
   background-color: white;
+  padding: 2rem 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(1rem, 1fr))[8];

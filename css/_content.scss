@@ -70,7 +70,6 @@
     grid-template-columns: 1fr repeat(8, minmax(1rem, 11rem)) 1fr;
 
     @media only screen and (max-width: 89rem) {
-        padding: 0 2rem;
         min-height: min-content;
     }
 
@@ -93,11 +92,32 @@
         grid-column: 2 / 10;
         margin-top: 5rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
         grid-gap: 2rem;
+        position: relative;
 
         @media only screen and (max-width: 89rem) { 
             height: min-content;
+            margin: 4rem 2rem;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 60%;
+            translate: -50%;
+            left: 50%;
+            background-color: $color-primary-cyan;
+            width: 40rem;
+            height: 0.5rem;
+
+            @media only screen and (max-width: 60rem) { 
+                top: 0;
+                translate: -50%;
+                left: 50%;
+                width: 0.5rem;
+                height: 40rem;
+            }
         }
 
 
@@ -107,9 +127,14 @@
         background-color: white;
         padding: 2rem;
         border-radius: 10px;
+        position: relative;
 
         @media only screen and (max-width: 89rem) { 
             height: min-content;
+        }
+
+        @media only screen and (max-width: 60rem) { 
+            grid-column: 1 / -1;
         }
 
         h3 {
@@ -123,6 +148,8 @@
         &-3 {
             transform: translateY(4rem);
         }
+
+
     }
 
     &__logo {
@@ -131,12 +158,16 @@
         padding: 1rem;
         border-radius: 50px;
         position: absolute;
-        transform: translateY(-100%);
+        top: 0;
+        translate: -50% -50%;
 
 
-        @media only screen and (max-width: 55rem) {
+
+        @media only screen and (max-width: 60rem) {
             height: 4rem;
-       
+            margin-left: 0rem;
+            left: 50%;
+         
         }
     }
 

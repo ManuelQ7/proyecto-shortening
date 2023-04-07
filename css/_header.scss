@@ -1,7 +1,7 @@
 .header {
     grid-column: 2 / 10;
     background-color: white;
-
+    padding: 2rem 0;
     display: grid;
     grid-template-columns: repeat(8, minmax(1rem, 1fr));
 
